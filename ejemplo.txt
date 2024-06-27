@@ -1,0 +1,69 @@
+TITLE: Titulo
+AUTHOR: Autor (opcional)
+DATE: Fecha (opcional, tiene q estar en orden)
+
+# Este es un header h1
+
+## Este es un header h2
+
+### Este es un header h3, el más bajo
+
+Hola
+que
+tal
+
+Este es un parrafo.
+Puede tener
+
+
+
+varias lineas.
+
+{*  Los  espacios y 		 tabs  		se ignoran en el documento final.
+
+1. Esta es una lista ordenada
+2. Los items pueden tener
+varias lineas
+1231. No importan los numeros de la lista
+9. Solo el formato
+
+- esta es una lista simple
+- tambien puede abarcar
+varias lineas
+
+- para separar dos listas usa 2 nuevas lineas 
+
+|: Y |: esta |: es |: la |: tabla
+|:no|:se|:necesitan|:espacios |: adicionales
+|:eres|:eres|:eres
+TABLE: Esta es la descripcion de una tabla
+
+IMAGE: [[example/img.png][Y esta es una imagen con descripcion]]
+
+IMAGE: [[example/img2.png]]
+
+Las imagenes tienes que estar separadas por 2 nuevas lineas:
+
+1. Esta es una lista ordenada
+2. Los items pueden tener
+varias lineas
+1231. No importan los numeros de la lista
+9. Solo el formato
+
+- esta es una lista simple
+- tambien puede abarcar
+varias lineas
+
+|: Y |: esta |: es |: la |: tabla
+|:no|:se|:necesitan|:espacios |: adicionales
+TABLE: Esta es la descripcion de una tabla
+
+{*{_ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat ligula ut eros tempor, ut tincidunt magna finibus. _}*} Proin eleifend nisi non ligula placerat, sit amet pretium lectus dictum. Sed vitae risus at tellus consectetur faucibus. Nullam eu ligula sed nisl fermentum varius. Nunc id ante in elit vehicula lacinia. Nam at efficitur nulla. Quisque vulputate interdum purus, sed eleifend nisi hendrerit in. Phasellus ultricies magna ac mauris tincidunt ultricies. Aenean sit amet sagittis ipsum. Nullam id risus in mauris dignissim sollicitudin. Integer suscipit tristique justo a rutrum.
+
+Maecenas feugiat vitae lacus a molestie. Aliquam erat volutpat. Integer aliquam mauris vitae justo laoreet vehicula. Sed at lobortis odio, vel varius mi. Nullam quis justo felis. Vestibulum aliquet congue velit. Morbi viverra, elit nec ultricies consectetur, eros purus dapibus nisi, eget tempor urna neque sit amet nulla. Vivamus nec nulla non eros ultricies sodales.
+
+## Este es un header h2
+
+Donec sollicitudin ipsum sit amet libero facilisis, vitae maximus nunc luctus. Aenean vel risus et magna ullamcorper placerat. Duis luctus vestibulum sapien, eu vehicula elit mattis ut. Nullam bibendum, enim in laoreet auctor, risus lacus suscipit libero, vel sagittis libero nulla eget enim. Integer id pretium orci. Nullam rhoncus posuere enim, non dignissim nulla fermentum ac. Phasellus eleifend lectus in enim vehicula lobortis. Quisque venenatis nisi eget vestibulum vestibulum. Nulla facilisi. Sed et sapien non nisi aliquet dictum vel at turpis.
+
+Nam non arcu tincidunt, vehicula enim a, cursus libero. Ut vel urna vel enim lacinia interdum. In vitae magna at arcu interdum convallis. Morbi vestibulum libero vitae urna elementum tristique. Vestibulum sagittis eleifend ligula, eu consectetur lorem sollicitudin vel. Suspendisse sit amet ligula vitae risus auctor placerat id nec sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut dapibus enim vitae lacinia congue. Vivamus ac eros sapien. Sed a arcu id nunc malesuada laoreet non in ipsum. Sed malesuada, nulla sit amet vehicula ullamcorper, odio mauris pharetra orci, non malesuada leo nunc non sem.

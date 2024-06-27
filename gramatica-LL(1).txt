@@ -1,0 +1,60 @@
+Doc ->	DocTitle FDocTitle .
+FDocTitle ->	double_newline DocBlocks eof
+|	eof .
+DocTitle ->	title_cap Ftitle_cap .
+Ftitle_cap ->	Text FText .
+FText ->	
+|	author_cap Fauthor_cap .
+Fauthor_cap ->  Text FText3 .
+FText3 ->	
+|	date_cap Text .
+DocBlocks ->	Block FBlock .
+FBlock ->	
+|	double_newline DocBlocks .
+Block ->	Par
+|	Header
+|	UList
+|	OList
+|	Image
+|	Table .
+Line ->	LineText
+|	LineStrong
+|	LineEmph
+|	Link .
+LineText ->	word Fword .
+Fword ->	
+|	LineText .
+LineStrong ->	strong_open Line strong_close .
+LineEmph ->	emph_open Line emph_close .
+Link ->	link_open Flink_open .
+Flink_open ->	word Fword1 .
+Fword1 ->	link_close
+|	link_mid Line link_close .
+Text ->	Line FLine .
+FLine ->	
+|	newline Text .
+Par ->	Text .
+UList ->	ulist_symb Fulist_symb .
+Fulist_symb ->	Text FText1 .
+FText1 ->	
+|	UList .
+OList ->	olist_symb Folist_symb .
+Folist_symb ->	Text FText2 .
+FText2 ->	
+|	OList .
+Image ->	image_cap Link .
+TableItem ->	table_sep Ftable_sep .
+Ftable_sep ->	Line FLine1 .
+FLine1 ->	
+|	TableItem .
+TableBody ->	TableItem FTableItem .
+FTableItem ->	
+|	newline TableBody .
+TableCap ->	table_cap Text .
+Table ->	TableBody TableCap .
+Header ->	head1 Text
+|	head2 Text
+|	head3 Text .
+
+// TABLA:
+https://smlweb.cpsc.ucalgary.ca/ll1-table.php?grammar=Doc+-%3E%09DocTitle+FDocTitle+.%0AFDocTitle+-%3E%09double_newline+DocBlocks+eof%0A%7C%09eof+.%0ADocTitle+-%3E%09title_cap+Ftitle_cap+.%0AFtitle_cap+-%3E%09Text+FText+.%0AFText+-%3E%09%0A%7C%09author_cap+Fauthor_cap+.%0AFauthor_cap+-%3E++Text+FText3+.%0AFText3+-%3E%09%0A%7C%09date_cap+Text+.%0ADocBlocks+-%3E%09Block+FBlock+.%0AFBlock+-%3E%09%0A%7C%09double_newline+DocBlocks+.%0ABlock+-%3E%09Par%0A%7C%09Header%0A%7C%09UList%0A%7C%09OList%0A%7C%09Image%0A%7C%09Table+.%0ALine+-%3E%09LineText%0A%7C%09LineStrong%0A%7C%09LineEmph%0A%7C%09Link+.%0ALineText+-%3E%09word+Fword+.%0AFword+-%3E%09%0A%7C%09LineText+.%0ALineStrong+-%3E%09strong_open+Line+strong_close+.%0ALineEmph+-%3E%09emph_open+Line+emph_close+.%0ALink+-%3E%09link_open+Flink_open+.%0AFlink_open+-%3E%09word+Fword1+.%0AFword1+-%3E%09link_close%0A%7C%09link_mid+Line+link_close+.%0AText+-%3E%09Line+FLine+.%0AFLine+-%3E%09%0A%7C%09newline+Text+.%0APar+-%3E%09Text+.%0AUList+-%3E%09ulist_symb+Fulist_symb+.%0AFulist_symb+-%3E%09Text+FText1+.%0AFText1+-%3E%09%0A%7C%09UList+.%0AOList+-%3E%09olist_symb+Folist_symb+.%0AFolist_symb+-%3E%09Text+FText2+.%0AFText2+-%3E%09%0A%7C%09OList+.%0AImage+-%3E%09image_cap+Link+.%0ATableItem+-%3E%09table_sep+Ftable_sep+.%0AFtable_sep+-%3E%09Line+FLine1+.%0AFLine1+-%3E%09%0A%7C%09TableItem+.%0ATableBody+-%3E%09TableItem+FTableItem+.%0AFTableItem+-%3E%09%0A%7C%09newline+TableBody+.%0ATableCap+-%3E%09table_cap+Text+.%0ATable+-%3E%09TableBody+TableCap+.%0AHeader+-%3E%09head1+Text%0A%7C%09head2+Text%0A%7C%09head3+Text+.&substs=
