@@ -1,4 +1,4 @@
 # Compilador-UCSP
 Integrantes de grupo:
-- Joquin Pino.
+- Joaquin Pino.
 - Marco Guillen.
