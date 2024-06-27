@@ -4,10 +4,12 @@
 #include "token.hpp"
 
 int main(int argc, char **argv) {
+  // Procesamiento del archivo de entrada
   ifstream input("ejemplo.txt");
   list<Token> tokens;
   int line_number = 1;
 
+  // Bucle principal de analisis lexico
   while (tokens.empty() || !tokens.back().eof()) {
     // ignorar comentarios y espacios
     while (input.peek() == ' ' || input.peek() == '\t')
@@ -49,6 +51,8 @@ int main(int argc, char **argv) {
       line_number++;
     }
   }
+
+  // Eliminacion de Tokens innecesarios
   for (auto it = tokens.begin(); it != tokens.end(); ++it) {
     if (it == tokens.begin() ||
         prev(it)->type._to_integral() != TokenType::NEWLINE)
@@ -68,6 +72,7 @@ int main(int argc, char **argv) {
     }
   }
 
+  // Impresion de Tokens producto del scanner
   puts("SCANNER:");
   for (const auto &token : tokens) {
     token.print();
@@ -85,6 +90,7 @@ int main(int argc, char **argv) {
   // Si el parser encuentra algun error solo muestra el error
   if (parse(tokens, parseTree)) {
     puts("Parseo exitoso. Árbol de parseo:\n");
+    // Traducimos el arbol de parser a Latex
     std::string latex = translateToLatex(parseTree);
     std::cout << "Traducción a LaTeX Terminada;\n" << std::endl;
     archivo << latex;
